@@ -7,8 +7,8 @@ haarcascade = cv2.CascadeClassifier(alg)
 while True:
     _,img = cam.read()
     text = "No Person Detected"
-    GrayImg = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-    face = haarcascade.detectMultiScale(GrayImg,1.4,6)
+    GrayImg1 = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    face = haarcascade.detectMultiScale(GrayImg1,1.4,6)
     for (x,y,w,h) in face:
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
         text = "Person Detected"
